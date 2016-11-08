@@ -33,7 +33,7 @@ namespace Journal.Models
             public override void InitializeDatabase(EntryContext context)
             {
                 base.InitializeDatabase(context);
-                if (!context.Entries.Any(x => x.EntryId == 1))
+                if (!context.Entries.Any(x => x.EntryId < 4))
                 {
                     context.Entries.Add(new Models.Entry()
                     {
@@ -56,8 +56,6 @@ namespace Journal.Models
                         Title = "Deep Thoughts About Zombies",
                         Text = "Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus.Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror.Nigh tofth eliv ingdead.",
                     });
-
-              
                 context.SaveChanges();
                 }
             }
