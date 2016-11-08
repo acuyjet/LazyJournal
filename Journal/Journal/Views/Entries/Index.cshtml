@@ -15,10 +15,10 @@
             @Html.DisplayNameFor(model => model.Prompt)
         </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Text)
+            @Html.DisplayNameFor(model => model.Title)
         </th>
         <th></th>
     </tr>
@@ -29,14 +29,14 @@
             @Html.DisplayFor(modelItem => item.Prompt)
         </td>*@
         <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Text)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EntryId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EntryId }) |
+            @Html.ActionLink("View", "Details", new { id=item.EntryId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.EntryId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EntryId })
         </td>
     </tr>
